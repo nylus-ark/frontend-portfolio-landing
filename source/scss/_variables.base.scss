@@ -5,12 +5,14 @@
 $font-serif-family:
   system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica,
   Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-system-serif-family:
+  "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
 $font-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 /*
   Themes fonts
 */
-$font-base-family: $font-serif-family;
+$font-base-family: "Fira Sans", $font-serif-family;
 
 /*
 * Breakpoints
