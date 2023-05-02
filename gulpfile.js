@@ -40,7 +40,9 @@ gulp.task('styles', function () {
   return gulp.src([
       paths.styles + '/style.scss'
     ])
-    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(sass.sync({
+      includePaths: ['node_modules/bootstrap/scss'],
+    }).on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(gulp.dest(paths.build + '/css/'))
     .pipe(postcss([
