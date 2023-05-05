@@ -15,6 +15,12 @@
 @import "_base";
 
 /*
+  Import partials
+*/
+@import "partials/titles";
+@import "partials/btns";
+
+/*
   Import all other blocks
 */
 @import "_blocks/container";

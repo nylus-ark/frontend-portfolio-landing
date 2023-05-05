@@ -14,17 +14,37 @@ $font-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 */
 $font-base-family: "Fira Sans", $font-serif-family;
 
-/*
-* Breakpoints
-*/
+$font-size-text: 1rem;
+$font-size-main-title: 3.3rem;
+$font-size-big-title: 2.2rem;
+$font-size-title: 1.2rem;
+$font-size-label: 0.78rem;
 
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+$line-height-base: calc(28 / 18);
+
+/*
+  Breakpoints
+*/
 $media-tablet: 768px;
 $media-tablet-landscape: 1024px;
 $media-desktop: 1200px;
 
 /*
-* Colors
+  Colors
 */
-
-$color-bg: #fff;
-$color-text: #151515;
+$color-bg: #f4f4f4;
+$color-main-title: #151515;
+$color-title: #222;
+$color-text: #222222b2;
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #c4c4c4;
+$color-violet: #4737ff;
+$color-blue: #1434e1;
+$color-sand: #c6b393;
+$color-orange: #f96241;

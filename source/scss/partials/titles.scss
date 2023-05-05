@@ -1,0 +1,27 @@
+.main-title {
+  color: $color-main-title;
+  font-size: $font-size-main-title;
+  font-weight: $font-weight-bold;
+  line-height: calc(70 / 60);
+}
+
+.big-title {
+  color: $color-title;
+  font-size: $font-size-big-title;
+  font-weight: $font-weight-semi-bold;
+  line-height: calc(50 / 40);
+}
+
+.title {
+  color: $color-title;
+  font-size: $font-size-title;
+  font-weight: $font-weight-medium;
+  line-height: calc(32 / 22);
+}
+
+.label-title {
+  font-size: $font-size-label;
+  font-weight: $font-weight-medium;
+  line-height: calc(24 / 14);
+  text-transform: uppercase;
+}

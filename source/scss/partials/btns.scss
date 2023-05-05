@@ -1,0 +1,34 @@
+.main-btn {
+  @include no-btn;
+
+  background-color: $color-violet;
+  color: $color-white;
+  letter-spacing: 0.22rem;
+  padding: 0.75rem 1.71rem 0.6rem;
+  max-width: 250px;
+
+  /*
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-height: 40px;
+  */
+
+  &--submit {
+    background-color: $color-sand;
+    padding: 0.5rem 1.4rem 0.4rem;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    background-color: $color-grey;
+    opacity: 0.6;
+  }
+}

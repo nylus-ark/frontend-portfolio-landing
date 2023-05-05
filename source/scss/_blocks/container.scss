@@ -1,5 +1,12 @@
+/*
+  Overrides bootstrap styles for container
+*/
 .container {
-  padding: 0 20px;
-  margin: 0 auto;
-  max-width: 1220px;
+  @media (min-width: 1200px) {
+    max-width: calc(1010px + 1.5rem);
+  }
+
+  @media (min-width: 1400px) {
+    max-width: calc(1110px + 1.5rem);
+  }
 }
