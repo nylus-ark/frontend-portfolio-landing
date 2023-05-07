@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <!-- Preload -->
+    
     <link rel="preload" href="fonts/fira-sans/fira-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <script>
@@ -18,11 +18,9 @@
       docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
     </script>
 
-    <!-- Favicon -->
+    
 
-    <!-- build:css -->
-    <link href="css/style.min.css" rel="stylesheet">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="css/style.min.css?v=1683488474466">
   </head>
   <body>
     <div class="wrapper">
@@ -35,9 +33,14 @@
           </h1>
         </div>
       </main>
-      @@include('blocks/footer.html')
+      <footer class="footer">
+  <div class="container">
+    © 2022 Swimming Pool Plastering-Tile-Coping
+  </div>
+</footer>
+
     </div>
 
-    <script src="js/app.js" defer></script>
+    <script src="js/app.js" defer="defer"></script>
   </body>
 </html>
