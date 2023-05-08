@@ -89,7 +89,7 @@ gulp.task('clean', function () {
 
 gulp.task('copy', function() {
   return gulp.src([
-      paths.src + '/img/**/*',
+      paths.src + '/img/*.{png,jpg}',
       paths.src + '/fonts/**/*'
     ], {
       base: paths.src
@@ -108,26 +108,17 @@ gulp.task('copy-js', function() {
 
 gulp.task('svg-store', function () {
   return gulp.src(paths.src + '/img/svg/*.svg')
-    .pipe(svgo({
-      plugins: [{
-        removeDoctype: true
-      }, {
-        removeComments: true
-      }, {
-        cleanupNumericValues: {
-          floatPrecision: 2
-        }
-      }, {
-        removeViewBox: false
-      }]
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
     }))
-    .pipe(svgstore())
-    .pipe(gulp.dest(paths.src + '/img/'));
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest(paths.build + '/img/'));
 });
 
-gulp.task('build-dev', gulp.series('clean', gulp.parallel('styles', 'render-view'), 'copy', 'copy-js'));
+gulp.task('build-dev', gulp.series('clean', gulp.parallel('styles', 'render-view'), 'copy', 'copy-js', 'svg-store'));
 
-gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'render-view'), 'copy', 'copy-js'));
+gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'render-view'), 'copy', 'copy-js', 'svg-store'));
 
 gulp.task('server', function () {
   server.init({
@@ -142,8 +133,6 @@ gulp.task('server', function () {
   gulp.watch(paths.src + '/img/**/*', gulp.series('copy'));
 
   gulp.watch(paths.js + '/**/*', gulp.series('copy-js'));
-
-  gulp.watch(paths.src + '/img/svg/*', gulp.series('svg-store', 'copy'));
 });
 
 gulp.task('default', gulp.series('build-dev', 'server'));
