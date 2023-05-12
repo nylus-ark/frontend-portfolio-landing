@@ -13,11 +13,6 @@
     <!-- Preload -->
     <link rel="preload" href="fonts/fira-sans/fira-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <script>
-      var docElement = document.documentElement;
-      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
-    </script>
-
     <!-- Favicon -->
 
     <!-- build:css -->
@@ -26,6 +21,8 @@
   </head>
   <body>
     <div class="wrapper">
+      @@include('blocks/header.html')
+
       <main class="content">
         <div class="coming-soon">
           <h1 class="coming-soon__title">
@@ -35,9 +32,10 @@
           </h1>
         </div>
       </main>
+
       @@include('blocks/footer.html')
     </div>
 
-    <script src="js/app.js" defer></script>
+    <script src="js/app.min.js"></script>
   </body>
 </html>

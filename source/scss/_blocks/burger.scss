@@ -1,0 +1,59 @@
+.burger {
+  @include no-btn;
+
+  width: 34px;
+  height: 14px;
+  position: relative;
+  z-index: 4;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: $color-black;
+    border-radius: 1px;
+    transition:
+      transform 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965),
+      top 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965),
+      width 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+  }
+
+  &::before {
+    top: 0;
+    right: 0;
+  }
+
+  &::after {
+    width: 18px;
+    right: 0;
+    bottom: 0;
+  }
+
+  &--is-active {
+    position: fixed;
+    margin-top: -8px;
+
+    &::before {
+      transform: rotate(45deg);
+      top: 50%;
+      width: 29px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 50%;
+      width: 29px;
+    }
+  }
+
+  &:hover {
+    @media (min-width: $media-tablet-landscape) {
+      &::before,
+      &::after {
+        width: 29px;
+      }
+    }
+  }
+}
