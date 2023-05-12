@@ -5,6 +5,8 @@ const del = require('del');
 const path = require('path');
 
 const rename = require('gulp-rename');
+const concat = require('gulp-concat');
+const terser = require('gulp-terser');
 
 const htmlmin = require('gulp-htmlmin');
 const htmlreplace = require('gulp-html-replace');
@@ -97,12 +99,15 @@ gulp.task('copy', function() {
     .pipe(gulp.dest(paths.build));
 });
 
-gulp.task('copy-js', function() {
+gulp.task('copy-js', function () {
   return gulp.src([
-      paths.js + '/**/*'
+      paths.js + '/**/*.js'
     ], {
       base: paths.js
     })
+    .pipe(concat('app.js'))
+    .pipe(terser())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.build + '/js'));
 });
 
