@@ -1,0 +1,10 @@
+.search-form {
+  &__btn {
+    @include no-btn;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
