@@ -11404,6 +11404,11 @@ img {
 /*
   Import all other blocks
 */
+.wrapper {
+  overflow: auto;
+  height: 100%;
+}
+
 /*
   Overrides bootstrap styles for container
 */
@@ -11418,6 +11423,10 @@ img {
   }
 }
 
+.header {
+  padding: 60px 0 30px;
+}
+
 /*
   Код ниже нужно удалить, он добавлен просто для примера
 */
@@ -11427,6 +11436,115 @@ img {
   padding: 40px 0;
   text-align: center;
   height: 100px;
+}
+
+.logo {
+  width: 75px;
+  height: 24px;
+  fill: #000;
+}
+.logo--white {
+  fill: #fff;
+}
+
+.search-form__btn {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.search-form__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.burger {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  width: 34px;
+  height: 14px;
+  position: relative;
+  z-index: 4;
+}
+.burger::before, .burger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 1px;
+  transition: transform 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965), top 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965), width 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+}
+.burger::before {
+  top: 0;
+  right: 0;
+}
+.burger::after {
+  width: 18px;
+  right: 0;
+  bottom: 0;
+}
+.burger--is-active {
+  position: fixed;
+  margin-top: -8px;
+}
+.burger--is-active::before {
+  transform: rotate(45deg);
+  top: 50%;
+  width: 29px;
+}
+.burger--is-active::after {
+  transform: rotate(-45deg);
+  top: 50%;
+  width: 29px;
+}
+@media (min-width: 1024px) {
+  .burger:hover::before, .burger:hover::after {
+    width: 29px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu__wrapper {
+  background-color: #fff;
+  padding: 118px 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 3;
+  transition: right 0.4s ease-in-out;
+}
+.menu__wrapper--open {
+  right: 0;
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+.menu__link {
+  color: rgba(34, 34, 34, 0.6980392157);
+  text-decoration: none;
+}
+.menu__link:hover {
+  color: #000;
+}
+.menu__link:active {
+  color: #c4c4c4;
 }
 
 /*

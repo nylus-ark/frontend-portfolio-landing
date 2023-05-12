@@ -13,17 +13,81 @@
     
     <link rel="preload" href="fonts/fira-sans/fira-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <script>
-      var docElement = document.documentElement;
-      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
-    </script>
-
     
 
-    <link rel="stylesheet" href="css/style.min.css?v=1683625631707">
+    <link rel="stylesheet" href="css/style.min.css?v=1683923107555">
   </head>
   <body>
     <div class="wrapper">
+      <header class="header">
+  <div class="container header__container">
+    <div class="row align-items-center">
+      <div class="col-4">
+        <svg class="logo">
+  <use xlink:href="img/sprite.svg#icon-logo"></use>
+</svg>
+
+      </div>
+
+      <div class="col-4 text-center">
+        <form class="search-form">
+  <input class="search-form__input u-hidden" type="search" placeholder="Search...">
+  <button class="search-form__btn" type="submit" aria-label="Search">
+    <svg class="search-form__icon" aria-hidden="true">
+      <use xlink:href="img/sprite.svg#icon-search"></use>
+    </svg>
+  </button>
+</form>
+
+      </div>
+
+      <div class="col-4 text-end">
+        <nav class="menu">
+  <button class="burger js-toggleMenu" data-menu="menu" type="button">
+</button>
+
+  <div id="menu" class="menu__wrapper">
+    <ul class="menu__list container">
+      <li class="menu__item">
+        <a href="#about" class="menu__link">
+          About us
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="#services" class="menu__link">
+          Services
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="#features" class="menu__link">
+          Features
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="#works" class="menu__link">
+          Works
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="#testimonials" class="menu__link">
+          Testimonials
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="#clients" class="menu__link">
+          Clients
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+
       <main class="content">
         <div class="coming-soon">
           <h1 class="coming-soon__title">
@@ -33,6 +97,7 @@
           </h1>
         </div>
       </main>
+
       <footer class="footer">
   <div class="container">
     © 2022 Swimming Pool Plastering-Tile-Coping
@@ -41,6 +106,6 @@
 
     </div>
 
-    <script src="js/app.js" defer="defer"></script>
+    <script src="js/app.min.js"></script>
   </body>
 </html>
