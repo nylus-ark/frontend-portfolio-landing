@@ -4,8 +4,9 @@
   background-color: $color-violet;
   color: $color-white;
   letter-spacing: 0.22rem;
-  padding: 0.75rem 1.71rem 0.6rem;
+  padding: 0.85rem 1.74rem 0.7rem;
   max-width: 250px;
+  transition: background-color 0.3s ease-in-out;
 
   /*
     text-overflow: ellipsis;
@@ -20,7 +21,7 @@
   }
 
   &:hover {
-    opacity: 0.8;
+    background-color: $color-black;
   }
 
   &:active {
@@ -29,6 +30,33 @@
 
   &:disabled {
     background-color: $color-grey;
-    opacity: 0.6;
+    opacity: 0.4;
+  }
+}
+
+.play-btn {
+  @include no-btn;
+  @include position-center;
+
+  background-color: $color-white;
+  width: 65px;
+  height: 65px;
+  transition: transform 0.3s ease-in-out;
+
+  &::before {
+    @include position-center;
+
+    content: "";
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid $color-orange;
+    width: 0;
+    height: 0;
+    margin-top: 23px;
+    margin-left: 27px;
+  }
+
+  &:disabled {
+    opacity: 0.4;
   }
 }

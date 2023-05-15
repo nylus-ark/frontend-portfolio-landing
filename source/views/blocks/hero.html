@@ -1,0 +1,40 @@
+<section class="hero">
+  <div class="hero__container container">
+    <div class="hero__wrapper row">
+      <div class="col-12 col-xl-6">
+        <h1 class="hero__title main-title">
+          Work around you and your team
+        </h1>
+
+        <p class="hero__text">
+          From ads that dance or sing to MTV-like commercials,
+          online advertisers are now using a new type of technology “rich media” to attract consumers.
+        </p>
+
+        @@include('elements/main-btn.html', {
+          "class": "hero__btn main-btn  label-title",
+          "text": "get started",
+        })
+
+        <div class="hero__video">
+          <video
+            class="video"
+            id="heroVideo"
+            poster="img/hero-preview@1x.png">
+            <source src="">
+          </video>
+
+          @@include('elements/play-btn.html', {
+            "class": "play-btn",
+            "class-js": "js-playVideo",
+            "data-video": "heroVideo",
+          })
+        </div>
+
+        <div class="hero__loader loader">
+          <div class="loader__load"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
