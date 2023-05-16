@@ -39,6 +39,7 @@
     "stylelint-scss": "^4.3.0"
   },
   "dependencies": {
+    "caniuse-lite": "^1.0.30001487",
     "postcss-scss": "^4.0.4"
   }
 }
