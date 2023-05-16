@@ -1,0 +1,39 @@
+.loader {
+  background-color: $color-light-grey;
+  max-width: 340px;
+  height: 2px;
+  margin: 0 31px;
+  position: relative;
+
+  @media (min-width: $media-tablet) {
+    max-width: 340px;
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    max-width: 278px;
+  }
+
+  &::before,
+  &::after {
+    color: $color-title;
+    position: absolute;
+    top: -12px;
+    left: -30px;
+  }
+
+  &::before {
+    content: "01";
+  }
+
+  &::after {
+    content: "03";
+    left: auto;
+    right: -30px;
+  }
+
+  &__load {
+    background-color: $color-sand;
+    width: 50%;
+    height: inherit;
+  }
+}

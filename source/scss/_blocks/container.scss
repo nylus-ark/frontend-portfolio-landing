@@ -3,10 +3,10 @@
 */
 .container {
   @media (min-width: 1200px) {
-    max-width: calc(1010px + 1.5rem);
+    max-width: calc(1010px + 3rem);
   }
 
   @media (min-width: 1400px) {
-    max-width: calc(1110px + 1.5rem);
+    max-width: calc(1110px + 3rem);
   }
 }
