@@ -1,3 +1,7 @@
 .header {
-  padding: 60px 0 30px;
+  padding: 25px 0 20px;
+
+  @media (min-width: $media-desktop) {
+    padding: 60px 0 30px;
+  }
 }
