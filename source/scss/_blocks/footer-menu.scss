@@ -1,0 +1,19 @@
+.footer-menu {
+  &__list {
+    @include no-list;
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-sand;
+    }
+  }
+}

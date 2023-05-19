@@ -1,0 +1,18 @@
+.footer-submenu {
+  &__list {
+    @include no-list;
+
+    display: flex;
+    gap: 43px;
+  }
+
+  &__link {
+    color: $color-white-opacity;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

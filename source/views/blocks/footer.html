@@ -1,5 +1,31 @@
 <footer class="footer">
   <div class="container">
-    © 2022 Swimming Pool Plastering-Tile-Coping
+    <div class="footer__wrapper">
+        @@include('elements/logo.html', {
+          "class": "footer__logo logo logo--white",
+        })
+
+        @@include('blocks/footer-menu.html', {
+          "class": "footer__menu",
+        })
+
+        @@include('blocks/subscribe-form.html', {
+          "class": "footer__form",
+        })
+    </div>
+
+    <div class="footer__bottom row">
+      <div class="col-6">
+        @@include('blocks/footer-submenu.html', {
+          "class": "",
+        })
+      </div>
+
+      <div class="col-6">
+        @@include('blocks/social-links.html', {
+          "class": "",
+        })
+      </div>
+    </div>
   </div>
 </footer>

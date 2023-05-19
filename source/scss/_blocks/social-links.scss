@@ -1,0 +1,18 @@
+.social-links {
+  @include no-list;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 19px;
+
+  &__icon {
+    fill: $color-white-opacity;
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease-in;
+
+    &:hover {
+      fill: $color-white;
+    }
+  }
+}
