@@ -1,0 +1,32 @@
+.footer-menu {
+  &__list {
+    @include no-list;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    @media (min-width: $media-tablet) {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 43px;
+    }
+
+    @media (min-width: $media-desktop) {
+      justify-content: space-between;
+      align-items: center;
+      gap: 0;
+    }
+  }
+
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-sand;
+    }
+  }
+}
