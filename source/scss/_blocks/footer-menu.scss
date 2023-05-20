@@ -3,8 +3,21 @@
     @include no-list;
 
     display: flex;
-    align-items: center;
-    gap: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    @media (min-width: $media-tablet) {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 43px;
+    }
+
+    @media (min-width: $media-desktop) {
+      justify-content: space-between;
+      align-items: center;
+      gap: 0;
+    }
   }
 
   &__link {
