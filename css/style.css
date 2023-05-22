@@ -11232,6 +11232,10 @@ body {
     font-size: 18px;
   }
 }
+html.modal-open,
+body.modal-open {
+  overflow: hidden;
+}
 
 img,
 video {
@@ -11876,6 +11880,44 @@ video {
 }
 .social-links__icon:hover {
   fill: #fff;
+}
+
+.modal-overlay {
+  display: none;
+  background-color: #000;
+  opacity: 0.3;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.modal-overlay--show {
+  display: block;
+}
+
+.modal--show {
+  display: block;
+}
+
+.modal-content {
+  border-radius: 0;
+  border: none;
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+}
+
+.modal-header {
+  border: none;
+  padding: 1.5rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border: none;
+  padding: 1.5rem;
 }
 
 /*
