@@ -32,6 +32,11 @@
       @@include('blocks/footer.html')
     </div>
 
+    @@include('blocks/modal.html', {
+      "class": "modal-success",
+      "class-js": "js-closeModal",
+    })
+
     <script src="js/app.min.js"></script>
   </body>
 </html>
