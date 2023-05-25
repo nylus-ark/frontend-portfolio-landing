@@ -3,7 +3,7 @@
 
   background-color: $color-violet;
   color: $color-white;
-  letter-spacing: 0.22rem;
+  // letter-spacing: 0.22rem;
   padding: 0.85rem 1.74rem 0.7rem;
   max-width: 250px;
   transition: background-color 0.3s ease-in-out;
@@ -58,5 +58,38 @@
 
   &:disabled {
     opacity: 0.4;
+  }
+}
+
+.slider-btn {
+  @include no-btn;
+
+  background-color: $color-grey;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  transition: opacity 0.3s ease-in;
+
+  &--next {
+    transform: scale(-1, 1);
+  }
+
+  &__icon {
+    @include position-center;
+
+    width: 11px;
+    height: 18px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &:disabled {
+    opacity: 0.2;
   }
 }

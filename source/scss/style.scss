@@ -33,50 +33,13 @@
 @import "_blocks/hero";
 @import "_blocks/loader";
 @import "_blocks/about";
+@import "_blocks/services";
+@import "_blocks/services-list";
+@import "_blocks/services-slider";
+@import "_blocks/slider-nav";
 @import "_blocks/footer";
 @import "_blocks/footer-menu";
 @import "_blocks/footer-submenu";
 @import "_blocks/subscribe-form";
 @import "_blocks/social-links";
 @import "_blocks/modal";
-
-/*
-  Ниже пример подключения других блоков
-
-  Каждый новый файл должен отвечать за конкретный блок в терминах БЭМ
-  (https://ru.bem.info/methodology/key-concepts/#%D0%B1%D0%BB%D0%BE%D0%BA)
-
-  Для именования селекторов давайте придерживаться стиля two dashes
-  (https://ru.bem.info/methodology/naming-convention/#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-two-dashes)
-  block-name__element-name--modificator
-*/
-
-/*
-  Код ниже нужно удалить, он добавлен просто для примера
-  Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
-  то он должен был бы быть в файле _blocks/coming-soon.scss
-*/
-
-.coming-soon {
-  color: $color-text;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-height: calc(100vh - 100px);
-  margin: auto;
-  padding: 0 5vw;
-
-  &__title {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 25vw;
-    font-weight: 400;
-    margin: 0 auto;
-    text-transform: uppercase;
-    width: 100%;
-  }
-}

@@ -1,0 +1,16 @@
+.services {
+  padding: 70px 0 91px;
+
+  &__title {
+    margin: 0 0 40px;
+  }
+
+  &__wrapper {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__slider {
+    padding: 100px 0 0;
+  }
+}

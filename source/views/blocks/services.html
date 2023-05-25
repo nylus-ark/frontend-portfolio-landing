@@ -1,0 +1,26 @@
+<section class="services">
+  <div class="services__container container">
+    <h2 class="services__title label-title">
+      — Services
+    </h2>
+
+    <div class="services__wrapper row">
+      <div class="col-12 col-xl-7">
+        <p class="big-title">
+          We love work hard and explore new things that’s why we cover lot of things.
+          Check our service list and view details
+        </p>
+      </div>
+
+      <div class="col-12 col-xl-4">
+        @@include('blocks/services-list.html', {
+          "class": "services__list",
+        })
+      </div>
+    </div>
+  </div>
+
+  <div class="services__slider">
+    @@include('blocks/services-slider.html')
+  </div>
+</section>

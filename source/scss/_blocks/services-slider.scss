@@ -1,0 +1,17 @@
+.services-slider {
+  padding: 0 0 0 0.75rem;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__slide {
+    width: 825px;
+    position: relative;
+
+    &--opacity {
+      opacity: 0.3;
+    }
+  }
+}

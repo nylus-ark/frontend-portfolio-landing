@@ -1,0 +1,22 @@
+.services-list {
+  @include no-list;
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: 21px;
+  max-height: 200px;
+
+  &__link {
+    color: $color-text;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-black;
+    }
+
+    &:active {
+      color: $color-grey;
+    }
+  }
+}
