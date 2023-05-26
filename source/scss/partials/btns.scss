@@ -3,7 +3,6 @@
 
   background-color: $color-violet;
   color: $color-white;
-  // letter-spacing: 0.22rem;
   padding: 0.85rem 1.74rem 0.7rem;
   max-width: 250px;
   transition: background-color 0.3s ease-in-out;
@@ -79,17 +78,18 @@
 
     width: 11px;
     height: 18px;
+    margin-right: 21px;
   }
 
   &:hover {
-    opacity: 0.6;
+    opacity: 0.8;
   }
 
   &:active {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 
   &:disabled {
-    opacity: 0.2;
+    opacity: 0.4;
   }
 }

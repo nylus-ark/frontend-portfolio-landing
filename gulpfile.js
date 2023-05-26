@@ -32,6 +32,8 @@ const paths = {
   js: './source/js',
 
   htmlincludes: './source/views',
+
+  swiper: './node_modules/swiper',
 };
 
 gulp.task('styles', function () {
@@ -40,7 +42,8 @@ gulp.task('styles', function () {
   ];
 
   return gulp.src([
-      paths.styles + '/style.scss'
+      paths.styles + '/style.scss',
+      paths.swiper + '/swiper-bundle.css',
     ])
     .pipe(sass.sync({
       includePaths: ['node_modules/bootstrap/scss'],
@@ -101,13 +104,18 @@ gulp.task('copy', function() {
 
 gulp.task('copy-js', function () {
   return gulp.src([
-      paths.js + '/**/*.js'
+      paths.js + '/**/*.js',
     ], {
       base: paths.js
     })
     .pipe(concat('app.js'))
     .pipe(terser())
     .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.build + '/js'));
+});
+
+gulp.task('copy-swiper-js', function () {
+  return gulp.src(paths.swiper + '/swiper-bundle.min.js')
     .pipe(gulp.dest(paths.build + '/js'));
 });
 
@@ -121,9 +129,9 @@ gulp.task('svg-store', function () {
     .pipe(gulp.dest(paths.build + '/img/'));
 });
 
-gulp.task('build-dev', gulp.series('clean', gulp.parallel('styles', 'render-view'), 'copy', 'copy-js', 'svg-store'));
+gulp.task('build-dev', gulp.series('clean', gulp.parallel('styles', 'render-view'), 'copy', 'copy-swiper-js', 'copy-js', 'svg-store'));
 
-gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'render-view'), 'copy', 'copy-js', 'svg-store'));
+gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'render-view'), 'copy', 'copy-swiper-js', 'copy-js', 'svg-store'));
 
 gulp.task('server', function () {
   server.init({
