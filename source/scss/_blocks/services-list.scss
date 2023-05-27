@@ -3,8 +3,17 @@
 
   display: flex;
   flex-flow: column wrap;
-  gap: 21px;
-  max-height: 200px;
+  gap: 11px;
+  max-height: 150px;
+
+  @media (min-width: $media-tablet) {
+    max-height: 100px;
+  }
+
+  @media (min-width: $media-desktop) {
+    max-height: 200px;
+    gap: 21px;
+  }
 
   &__link {
     color: $color-text;

@@ -38,9 +38,14 @@
   @include position-center;
 
   background-color: $color-white;
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   transition: transform 0.3s ease-in-out;
+
+  @media (min-width: $media-tablet) {
+    width: 65px;
+    height: 65px;
+  }
 
   &::before {
     @include position-center;
@@ -51,8 +56,13 @@
     border-left: 15px solid $color-orange;
     width: 0;
     height: 0;
-    margin-top: 23px;
-    margin-left: 27px;
+    margin-top: 16px;
+    margin-left: 20px;
+
+    @media (min-width: $media-tablet) {
+      margin-top: 23px;
+      margin-left: 27px;
+    }
   }
 
   &:disabled {
@@ -64,10 +74,15 @@
   @include no-btn;
 
   background-color: $color-grey;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: relative;
   transition: opacity 0.3s ease-in;
+
+  @media (min-width: $media-tablet) {
+    width: 50px;
+    height: 50px;
+  }
 
   &--next {
     transform: scale(-1, 1);
@@ -78,7 +93,11 @@
 
     width: 11px;
     height: 18px;
-    margin-right: 21px;
+    margin-right: 16px;
+
+    @media (min-width: $media-tablet) {
+      margin-right: 21px;
+    }
   }
 
   &:hover {
