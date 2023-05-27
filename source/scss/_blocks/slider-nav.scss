@@ -1,0 +1,9 @@
+.slider-nav {
+  max-width: calc(105px + 1.5rem);
+  padding: 30px 0 0;
+
+  @media (min-width: $media-tablet) {
+    max-width: calc(125px + 1.8rem);
+    padding: 50px 0 0;
+  }
+}

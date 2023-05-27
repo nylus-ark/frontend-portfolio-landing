@@ -1,10 +1,13 @@
-function closeModal(modal) {
+function closeModal() {
+  const modalSuccess = document.querySelector('.modal-success');
   const closeBtns = document.querySelectorAll('.js-closeModal');
 
   const handleCloseModal = (evt) => {
     evt.preventDefault();
 
-    removeClassModal(modal);
+    body.classList.remove('modal-open');
+    modalSuccess?.classList.remove('modal--show');
+    modalOverlay?.classList.remove('modal-overlay--show');
   };
 
   closeBtns?.forEach((btn) => {
@@ -12,10 +15,4 @@ function closeModal(modal) {
   });
 }
 
-function removeClassModal(modal) {
-  body.classList.remove('modal-open');
-  modal?.classList.remove('modal--show');
-  modalOverlay?.classList.remove('modal-overlay--show');
-}
-
-closeModal(modalSuccess);
+closeModal();

@@ -1,0 +1,28 @@
+.services {
+  padding: 20px 0 21px;
+
+  @media (min-width: $media-desktop) {
+    padding: 70px 0 91px;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+
+    @media (min-width: $media-desktop) {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__wrapper {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__slider {
+    padding: 50px 0 0;
+
+    @media (min-width: $media-desktop) {
+      padding: 100px 0 0;
+    }
+  }
+}

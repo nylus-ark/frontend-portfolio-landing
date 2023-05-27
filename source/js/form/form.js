@@ -20,7 +20,7 @@ function sendForm(form, modal) {
     });
 
     if (modalText) {
-      modalText.innerText = `Your data successfully send to ${inputs[0].email}`;
+      modalText.innerText = `Your data has been successfully sent to ${inputs[0].email}`;
     }
 
     body.classList.add('modal-open');
