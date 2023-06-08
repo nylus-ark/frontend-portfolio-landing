@@ -1,0 +1,33 @@
+.features {
+  padding: 59px 0 71px;
+
+  @media (min-width: $media-desktop) {
+    padding: 109px 0 141px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: -40px;
+    left: -100px;
+    z-index: 0;
+  }
+
+  &__cover {
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+  }
+
+  &__text {
+    margin: 0 0 62px;
+  }
+
+  &__icon {
+    width: 54px;
+    height: 54px;
+  }
+}
