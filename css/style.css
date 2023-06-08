@@ -11879,6 +11879,36 @@ video {
   }
 }
 
+.features {
+  padding: 59px 0 71px;
+}
+@media (min-width: 1200px) {
+  .features {
+    padding: 109px 0 141px;
+  }
+}
+.features__bg {
+  position: absolute;
+  top: -40px;
+  left: -100px;
+  z-index: 0;
+}
+.features__cover {
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+}
+.features__title {
+  margin: 0 0 30px;
+}
+.features__text {
+  margin: 0 0 62px;
+}
+.features__icon {
+  width: 54px;
+  height: 54px;
+}
+
 .footer {
   background-color: #515151;
   padding: 59px 0 35px;
