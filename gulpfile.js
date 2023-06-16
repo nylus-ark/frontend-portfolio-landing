@@ -74,10 +74,6 @@ gulp.task('render-view', function () {
         console.error('File include error', error);
       })
     )
-    .pipe(htmlreplace({
-      'js': 'js/scripts.min.js?v=' + v,
-      'css': 'css/style.min.css?v=' + v
-    }))
     .pipe(htmlmin({
       collapseWhitespace: false,
       // collapseWhitespace: true,

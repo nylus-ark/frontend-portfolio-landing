@@ -1,0 +1,28 @@
+.testimonials-slider {
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__content {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__text {
+    margin: 43px 0 21px;
+
+    @media (min-width: $media-tablet) {
+      margin: 53px 0 101px;
+    }
+
+    @media (min-width: $media-desktop) {
+      margin: 93px 0 121px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
