@@ -1,0 +1,25 @@
+<section id="testimonials" class="testimonials">
+  <div class="testimonials__container container">
+    <h2 class="testimonials__title label-title container">
+      — Testimonials
+    </h2>
+
+    @@include('blocks/testimonials-slider.html')
+
+    <div class="testimonials__slider-nav slider-nav container">
+      <div class="row">
+        <div class="col">
+          @@include('elements/slider-btn.html', {
+            "class": "testimonials__btn-prev",
+          })
+        </div>
+
+        <div class="col">
+          @@include('elements/slider-btn.html', {
+            "class": "testimonials__btn-next slider-btn--next",
+          })
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

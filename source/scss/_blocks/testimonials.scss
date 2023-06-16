@@ -1,0 +1,28 @@
+.testimonials {
+  padding: 62px 0 80px;
+
+  @media (min-width: $media-desktop) {
+    padding: 124px 0 176px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__slider-nav {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    z-index: 100;
+
+    @media (min-width: $media-tablet) {
+      bottom: 0;
+    }
+  }
+}
