@@ -35,6 +35,16 @@
     </div>
   </div>
 
-
-  @@include('blocks/slider-nav.html')
+  <div class="slider-nav row">
+    <div class="col">
+      @@include('elements/slider-btn.html', {
+        "class": "services-slider__btn-prev",
+      })
+    </div>
+    <div class="col">
+      @@include('elements/slider-btn.html', {
+        "class": "services-slider__btn-next slider-btn--next",
+      })
+    </div>
+  </div>
 </div>
