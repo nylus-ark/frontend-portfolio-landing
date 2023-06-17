@@ -1,0 +1,13 @@
+.clients {
+  background-color: #fafafa;
+  padding: 52px 0 69px;
+
+  @media (min-width: $media-tablet-landscape) {
+    padding: 102px 0 139px;
+  }
+
+  &__title {
+    color: $color-title;
+    margin-bottom: 17px;
+  }
+}
