@@ -1,0 +1,36 @@
+.clients-list {
+  @include no-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px 0;
+  margin: 82px 0 0;
+
+  @media (min-width: $media-tablet) {
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex: 50% 0 0;
+
+    @media (min-width: $media-tablet) {
+      flex: 0 0 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+    opacity: 0.2;
+    transition: opacity 0.3s ease-in;
+
+    &--active {
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
